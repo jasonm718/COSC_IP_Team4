@@ -47,4 +47,4 @@ class smoothening:
 input_image = cv2.imread("Lenna0.jpg", 0)
 app = smoothening((10,10), "averaging_filter", input_image)
 output = app.smoothening()
-cv2.imwrite("blurred.jpg", output)
+cv2.imwrite("output/blurred.jpg", output)

@@ -49,10 +49,10 @@ input_image = cv2.imread(app.filename, 0)
 app = smoothen.smoothening((3,3), "gaussian", input_image)
 blurred = app.smoothening()
 mask = input_image - blurred
-
-cv2.imwrite("blurred.jpg", blurred)
-cv2.imwrite("mask.jpg", mask)
-cv2.imwrite("sharpened.jpg", input_image - mask)
+dirO = 'output/'
+cv2.imwrite(dirO +'blurred.jpg', blurred)
+cv2.imwrite(dirO + "mask.jpg", mask)
+cv2.imwrite(dir0 + "sharpened.jpg", input_image - mask)
 
 root.destroy()
 
